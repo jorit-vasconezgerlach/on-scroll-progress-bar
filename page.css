@@ -5,15 +5,16 @@
     box-sizing: border-box;
 }
 
-::-webkit-scrollbar {
-    width: 0;
-}
-
 body {
     color: #fff;
     display: grid;
     place-items: center;
     background: #000;
+    -ms-overflow-style: none; /* Hide Scroll Bar*/
+    scrollbar-width: none; /* Hide Scroll Bar*/
+}
+body::-webkit-scrollbar {
+    display: none; /* Hide Scroll Bar*/
 }
 
 #content {
@@ -30,10 +31,5 @@ body {
     background: #222;
 }
 #progressBar {
-    top: 0;
-    right: 0;
-    position: fixed;
-    width: 10px;
     background: #CA3216;
-    z-index: 1;
 }
